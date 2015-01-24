@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Enigma is getting decoded!</title>
+    <!--<link rel="stylesheet" href="css/bootstrap.light.min.css" title="Light">-->
+    <script src="vendor/require/require.js"></script>
+    <script src="app/components/require.config.js"></script>
+    <script>require(['enigma'], function () {})</script>
+  </head>
+  <body ng-app="enigma" ng-controller="enigmaCtrl">
+    <noscript>
+      <div class="container">
+        <center><h3>JavaScript is needed to start Enigma</h3></center>
+      </div>
+    </noscript>
+    <div ng-cloak>{{enigma}}</div>
+  </body>
+</html>
