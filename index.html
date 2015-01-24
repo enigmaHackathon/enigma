@@ -3,10 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title>Enigma is getting decoded!</title>
+    <link rel="stylesheet" href="bower_components/nvd3/nv.d3.css"/>
     <!--<link rel="stylesheet" href="css/bootstrap.light.min.css" title="Light">-->
     <script src="vendor/require/require.js"></script>
-    <script src="app/components/require.config.js"></script>
     <script>require(['enigma'], function () {})</script>
+    <script src="app/components/require.config.js"></script>
   </head>
   <body ng-app="enigma" ng-controller="enigmaCtrl">
     <noscript>
@@ -14,6 +15,19 @@
         <center><h3>JavaScript is needed to start Enigma</h3></center>
       </div>
     </noscript>
-    <div ng-cloak>{{enigma}}</div>
+    <!--<div ng-cloak>{{enigma}}</div>-->
+    <div class="container">
+        <div class="header"></div>
+        <div class="content">
+            <nvd3-line-chart
+                    data="exampleData"
+                    showXAxis="true"
+                    showYAxis="true"
+                    tooltips="true"
+                    interactive="true">
+            </nvd3-line-chart>
+        </div>
+        <div class="footer"></div>
+    </div>
   </body>
 </html>
